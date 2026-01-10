@@ -4,9 +4,11 @@
 
 body {
   margin: 0;
+  padding-top: 60px;
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
   background-color: #fff;
+  position: relative;
 }
 
 h1,
@@ -40,18 +42,29 @@ li {
 /* ========================= */
 
 .nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0.5px 2.5px rgba(0, 0, 0, 0.18);
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 14px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 8px 20px;
-  box-shadow: 0px 0.5px 2.5px 0.5px #0000;
 }
 
 .nav-link ul {
   display: flex;
   gap: 12px;
   align-items: center;
+  justify-content: flex-start;
 }
 li a {
   color: #3b4752;
@@ -113,7 +126,7 @@ li a:hover {
 
 .about {
   background-color: #f2f2f2;
-  min-height: 550px;
+  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,7 +407,7 @@ li a:hover {
     text-align: center;
   }
   .about {
-    padding: 0 24px;
+    padding: 24px;
   }
   .about-container {
     width: 90%;
@@ -458,10 +471,10 @@ li a:hover {
 }
 
 @media (max-width: 640px) {
-  .nav {
+  .nav-inner {
     flex-direction: column;
-    gap: 12px;
   }
+
 
   .hero-img img {
     width: 220px;
